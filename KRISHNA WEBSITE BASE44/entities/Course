@@ -1,0 +1,72 @@
+{
+  "name": "Course",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Course title"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly slug"
+    },
+    "short_description": {
+      "type": "string",
+      "description": "Brief description for cards"
+    },
+    "full_description": {
+      "type": "string",
+      "description": "Full course description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "communication",
+        "leadership",
+        "corporate",
+        "academics",
+        "languages",
+        "wellness",
+        "exam_prep"
+      ],
+      "description": "Course category"
+    },
+    "duration": {
+      "type": "string",
+      "description": "Course duration"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name from lucide"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Course image URL"
+    },
+    "highlights": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Key highlights of the course"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether course is featured"
+    },
+    "price": {
+      "type": "string",
+      "description": "Course price or pricing info"
+    },
+    "order": {
+      "type": "number",
+      "default": 0,
+      "description": "Display order"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}

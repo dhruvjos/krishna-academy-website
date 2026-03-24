@@ -1,0 +1,41 @@
+{
+  "name": "Inquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "course_interest": {
+      "type": "string",
+      "description": "Course they are interested in"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional message"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "enrolled",
+        "closed"
+      ],
+      "default": "new",
+      "description": "Inquiry status"
+    }
+  },
+  "required": [
+    "name",
+    "phone"
+  ]
+}
